@@ -44,10 +44,10 @@ class Actionable(object):
     type : URI
         The type of `URI`.
         
-    location_required : Bool
+    location_required : bool
         True if location is required for using the Actionable.
 
-    is_default : Bool
+    is_default : bool
         if True, on click of the element, this actionable will get triggered.
 
     payload : dict 
