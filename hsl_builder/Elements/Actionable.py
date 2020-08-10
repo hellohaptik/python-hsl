@@ -51,7 +51,7 @@ class Actionable(object):
         if True, on click of the element, this actionable will get triggered.
 
     payload : dict 
-        optional payload containind metadata that might be needed by the Actionable
+        optional payload containing metadata that might be needed by the Actionable
     """
 
     def __init__(self, text: str, type: ActionableType, uri: URI):
