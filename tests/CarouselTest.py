@@ -18,7 +18,6 @@ class CarouselTest(TestCase):
         self.assertEqual(self.carousel.items, [])
         self.assertEqual(self.carousel.aspect_ratio, 1)
         self.assertEqual(self.carousel.width, CarouselWidth.THIN)
-        self.assertEqual(self.carousel.isNew, False)
 
     def test_hsl_default(self):
         """
@@ -32,8 +31,7 @@ class CarouselTest(TestCase):
                 'image_aspect_ratio': 1,
                 'width': 'THIN',
                 'items': []
-            },
-            'isNew': False
+            }
         })
 
     @mock.patch.object(CarouselItem,'to_hsl')
@@ -58,8 +56,7 @@ class CarouselTest(TestCase):
                         "key": "value"
                     }
                 ]
-            },
-            'isNew': False
+            }
         })
         mock_hsl.assert_called_once()
 
@@ -76,8 +73,7 @@ class CarouselTest(TestCase):
                 'image_aspect_ratio': 23,
                 'width': 'THIN',
                 'items': []
-            },
-            'isNew': False
+            }
         })
 
     def test_hsl_width_FAT(self):
@@ -93,8 +89,7 @@ class CarouselTest(TestCase):
                 'image_aspect_ratio': 1,
                 'width': 'FAT',
                 'items': []
-            },
-            'isNew': False
+            }
         })
 
     def test_hsl_width_BIG(self):
@@ -110,8 +105,7 @@ class CarouselTest(TestCase):
                 'image_aspect_ratio': 1,
                 'width': 'BIG',
                 'items': []
-            },
-            'isNew': False
+            }
         })
 
     def test_hsl_width_MEDIUM(self):
@@ -127,25 +121,7 @@ class CarouselTest(TestCase):
                 'image_aspect_ratio': 1,
                 'width': 'MEDIUM',
                 'items': []
-            },
-            'isNew': False
-        })
-
-    def test_hsl_is_new(self):
-        """
-        verify that isNew flag is updated in the generated hsl
-        """
-        self.carousel.isNew = True
-        self.assertDictEqual(self.carousel.to_hsl(),{
-            'text': 'title',
-            'type': 'CAROUSEL',
-            'voice_text': '',
-            'data': {
-                'image_aspect_ratio': 1,
-                'width': 'THIN',
-                'items': []
-            },
-            'isNew': True
+            }
         })
 
 if __name__ == '__main__':

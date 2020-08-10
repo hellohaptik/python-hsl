@@ -26,16 +26,12 @@ class Carousel(BaseElement):
 
     items : List[CarouselItem]
         list of carousel items for the carousel
-
-    isNew : bool
-        the isNew parameter for Carousel
     """
     def __init__(self,text):
         super().__init__(text,'CAROUSEL')
         self.aspect_ratio: float = 1.0
         self.width: CarouselWidth = CarouselWidth.THIN
         self.items: List[CarouselItem] = []
-        self.isNew: bool = False #is this just for carousels
 
     def to_hsl(self):
         """
@@ -48,6 +44,5 @@ class Carousel(BaseElement):
             'items': [item.to_hsl() for item in self.items]
         }
         hsl['data'] = data
-        hsl['isNew'] = self.isNew
 
         return hsl

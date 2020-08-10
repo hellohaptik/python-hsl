@@ -18,7 +18,7 @@ class FormFieldTest(TestCase):
             'search_source': '',
             'search_placeholder': '',
             'autofill': '',
-            'autofill_source': '',
+            'autofill_source': ''
         }
 
     def test_default_hsl(self):
