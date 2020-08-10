@@ -34,14 +34,20 @@ class SystemCompleteTest(TestCase):
         """
         verify that payload is added in the generated hsl
         """
-        self.system.payload = {"key": "value"}
+        self.system.payload = {
+            "key": "value",
+            "agent":"agent_name"
+        }
         self.assertDictEqual(self.system.to_hsl(),{
             'text': 'complete',
             'type': 'SYSTEM',
             'voice_text': '',
             'data': {
                 'event_name': 'chat_complete',
-                'payload': {"key": "value"}
+                'payload': {
+                    "key": "value",
+                    "agent":"agent_name"
+                }
             }
         })
 
@@ -76,14 +82,20 @@ class SystemWaitingTest(TestCase):
         """
         verify that payload is added in the generated hsl
         """
-        self.system.payload = {"key": "value"}
+        self.system.payload = {
+            "key": "value",
+            "agent":"agent_name"
+        }
         self.assertDictEqual(self.system.to_hsl(),{
             'text': 'waiting',
             'type': 'SYSTEM',
             'voice_text': '',
             'data': {
                 'event_name': 'chat_pinned',
-                'payload': {"key": "value"}
+                'payload': {
+                    "key": "value",
+                    "agent":"agent_name"
+                }
             }
         })
 
