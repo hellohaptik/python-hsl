@@ -3,7 +3,8 @@ from .Base import BaseElement
 
 class NativeAction(BaseElement):
     """
-    Create Native Action HSL Message
+    Create Native Action HSL Message.
+    Native Actions are used to communicate with the parent app in which SDK is integrated
 
     Attributes
     ----------

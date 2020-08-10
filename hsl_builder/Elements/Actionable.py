@@ -51,7 +51,7 @@ class Actionable(object):
         if True, on click of the element, this actionable will get triggered.
 
     payload : dict 
-        optional payload containind metadata that might be needed by the Actionable
+        optional payload containing metadata that might be needed by the Actionable
     """
 
     def __init__(self, text: str, type: ActionableType, uri: URI):
@@ -71,6 +71,6 @@ class Actionable(object):
             'type': self.type.value,
             'uri': self.uri.value,
             'is_default': 1 if self.is_default else 0,
-            'location_required': self.location_required, #TODO: slight discrepancy in notion whether string or bool is passed
+            'location_required': self.location_required,
             'payload': self.payload
         }

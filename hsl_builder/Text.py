@@ -8,8 +8,7 @@ class Text(BaseElement):
     """
     def __init__(self,text):
         super().__init__(text,'TEXT')
-        self.quick_replies: List[Actionable] = [] #TODO subclass actionables for qr
-
+        self.quick_replies: List[Actionable] = []
     def to_hsl(self):
         """
         Generate HSL message
