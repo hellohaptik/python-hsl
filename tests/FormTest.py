@@ -43,5 +43,34 @@ class FormTest(TestCase):
         })
         mock_hsl.assert_called_once()
 
+    @mock.patch.object(FormField, 'to_hsl')
+    def test_hsl_multiple_fields(self, mock_hsl):
+        """
+        verify the default hsl generated
+        """
+        mockfield1 = MockFormField()
+        mockfield2 = MockFormField()
+        mock_hsl.return_value = {
+            "text": "mock text"
+        }
+        self.form.fields.append(mockfield1)
+        self.form.fields.append(mockfield2)
+        self.assertDictEqual(self.form.to_hsl(),{
+            'title': 'title',
+            'type': 'FORM',
+            'subtitle': 'subtitle',
+            'data': {
+                'fields': [
+                    {
+                        "text": "mock text"
+                    },
+                    {
+                        "text": "mock text"
+                    }
+                ]
+            }
+        })
+        self.assertEqual(mock_hsl.call_count,2)
+
 if __name__ == '__main__':
     main()

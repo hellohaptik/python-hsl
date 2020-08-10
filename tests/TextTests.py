@@ -56,5 +56,34 @@ class TextTest(TestCase):
         })
         mock_hsl.assert_called_once()
 
+    @mock.patch.object(Actionable,'to_hsl')
+    def test_hsl_multiple_qr(self,mock_hsl):
+        """
+        verify that Quick_replies is updated in the hsl
+        """
+        mock_hsl.return_value = {
+            "key": "value"
+        }
+        mock_qr1 = MockActionable()
+        mock_qr2 = MockActionable()
+        self.text.quick_replies.append(mock_qr1)
+        self.text.quick_replies.append(mock_qr2)
+        self.assertDictEqual(self.text.to_hsl(),{
+            'text': 'title',
+            'type': 'TEXT',
+            'voice_text': '',
+            'data': {
+                'quick_replies': [
+                    {
+                        "key": "value"
+                    },
+                    {
+                        "key": "value"
+                    }
+                ]
+            }
+        })
+        self.assertEqual(mock_hsl.call_count,2)
+
 if __name__ == '__main__':
     main()
