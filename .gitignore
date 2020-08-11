@@ -1,0 +1,6 @@
+.vscode
+*.pyc
+*.egg-info/
+dist/
+build/
+htmlcov/
