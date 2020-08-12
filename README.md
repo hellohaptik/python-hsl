@@ -10,7 +10,7 @@ pip install --pre hsl_builder
 ```
 OR
 
-You can also add `hsl_builder==0a1` it to your project _`requirements.txt`_
+You can also add `hsl_builder==0.0.1a0` it to your project _`requirements.txt`_
 ### Usage:
 ```python
 #import hsl builder
