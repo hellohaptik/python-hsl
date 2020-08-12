@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='hsl_builder',
-    version='0.0.1',
+    version='0.a1',
     description='HSL Builder for creating hsl elements',
     license='MIT',
     long_description=long_description,
