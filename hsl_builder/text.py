@@ -1,6 +1,6 @@
 from typing import List
-from .Base import BaseElement
-from .Elements.Actionable import Actionable
+from .base import BaseElement
+from .elements.actionable import Actionable
 
 class Text(BaseElement):
     """

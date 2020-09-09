@@ -2,7 +2,7 @@ from unittest import TestCase,main
 import mock
 
 from hsl_builder import Text
-from hsl_builder.Elements import Actionable, ActionableType, URI
+from hsl_builder.elements import Actionable, ActionableType, URI
 from .mocks import MockActionable
 
 

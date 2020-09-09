@@ -1,7 +1,7 @@
 from unittest import TestCase,main
 import mock
 
-from hsl_builder.Elements import FormField,FormFieldType,FormKeyboardType
+from hsl_builder.elements import FormField,FormFieldType,FormKeyboardType
 
 class FormFieldTest(TestCase):
 

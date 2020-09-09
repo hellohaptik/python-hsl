@@ -1,8 +1,8 @@
 from enum import Enum,unique
 from typing import List
 
-from .Base import BaseElement
-from .Elements.CarouselItem import CarouselItem
+from .base import BaseElement
+from .elements.carousel_item import CarouselItem
 
 @unique
 class CarouselWidth(Enum):

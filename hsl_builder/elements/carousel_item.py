@@ -1,4 +1,4 @@
-from .Actionable import Actionable
+from .actionable import Actionable
 from typing import List
 
 class CarouselItem(object):

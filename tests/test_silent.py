@@ -2,7 +2,7 @@ from unittest import TestCase,main
 import mock
 
 from hsl_builder import Silent
-from hsl_builder.Elements import SilentAction
+from hsl_builder.elements import SilentAction
 from .mocks import MockSilentAction
 
 
