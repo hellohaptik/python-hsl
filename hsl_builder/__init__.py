@@ -1,11 +1,11 @@
-from .Button import Button
-from .Carousel import Carousel, CarouselWidth
-from .Form import Form
-from .NativeAction import NativeAction
-from .Silent import Silent
-from .Text import Text
-from .System import System, SystemEvents
-from .Base import BaseElement
+from .button import Button
+from .carousel import Carousel, CarouselWidth
+from .form import Form
+from .native_action import NativeAction
+from .silent import Silent
+from .text import Text
+from .system import System, SystemEvents
+from .base import BaseElement
 
 
 __all__= [

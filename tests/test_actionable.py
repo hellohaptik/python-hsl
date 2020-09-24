@@ -1,6 +1,6 @@
 import mock
 from unittest import TestCase, main
-from hsl_builder.Elements import Actionable, URI, ActionableType
+from hsl_builder.elements import Actionable, URI, ActionableType
 
 class ActionableTest(TestCase):
 

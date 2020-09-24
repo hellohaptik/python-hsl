@@ -1,7 +1,7 @@
 import mock
 from unittest import TestCase,main
 
-from hsl_builder.Elements import CarouselItem,Actionable
+from hsl_builder.elements import CarouselItem,Actionable
 from .mocks import MockActionable
 
 class CarouselItemTest(TestCase):

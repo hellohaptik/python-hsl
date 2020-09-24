@@ -1,4 +1,4 @@
-from hsl_builder.Elements import Actionable, FormField, CarouselItem, SilentAction
+from hsl_builder.elements import Actionable, FormField, CarouselItem, SilentAction
 
 class MockActionable(Actionable):
 

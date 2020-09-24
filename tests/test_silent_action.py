@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 
-from hsl_builder.Elements import SilentAction
+from hsl_builder.elements import SilentAction
 
 
 class SilentItemTest(TestCase):

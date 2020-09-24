@@ -2,7 +2,7 @@ from unittest import TestCase,main
 import mock
 
 from hsl_builder import Carousel,CarouselWidth
-from hsl_builder.Elements import CarouselItem
+from hsl_builder.elements import CarouselItem
 
 class CarouselTest(TestCase):
 

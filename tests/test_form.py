@@ -2,7 +2,7 @@ from unittest import TestCase,main
 import mock
 
 from hsl_builder import Form
-from hsl_builder.Elements import FormField
+from hsl_builder.elements import FormField
 from .mocks import MockFormField
 
 class FormTest(TestCase):

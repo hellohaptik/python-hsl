@@ -1,4 +1,4 @@
-from .Base import BaseElement
+from .base import BaseElement
 
 
 class NativeAction(BaseElement):

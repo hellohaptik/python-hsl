@@ -1,7 +1,7 @@
-from .Base import BaseElement
+from .base import BaseElement
 from typing import List
 
-from .Elements import SilentAction
+from .elements import SilentAction
 
 class Silent(BaseElement):
     """

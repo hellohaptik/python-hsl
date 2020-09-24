@@ -2,7 +2,7 @@ from unittest import TestCase,main
 import mock
 
 from hsl_builder import Button
-from hsl_builder.Elements import Actionable
+from hsl_builder.elements import Actionable
 from .mocks import MockActionable
 
 class ButtonTest(TestCase):
