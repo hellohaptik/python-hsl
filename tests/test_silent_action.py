@@ -47,5 +47,6 @@ class SilentItemTest(TestCase):
         self.expected_hsl['data']['key'] = 'value'
         self.assertDictEqual(self.silent_action.to_hsl(), self.expected_hsl)
 
+
 if __name__ == '__main__':
     main()

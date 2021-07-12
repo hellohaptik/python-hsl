@@ -8,7 +8,7 @@ from .system import System, SystemEvents
 from .base import BaseElement
 
 
-__all__= [
+__all__ = [
     'Button',
     'CarouselWidth',
     'Carousel',

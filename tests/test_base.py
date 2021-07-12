@@ -1,7 +1,7 @@
-from unittest import TestCase,main
-import mock
+from unittest import TestCase, main
 
 from hsl_builder import BaseElement
+
 
 class BaseTest(TestCase):
 
@@ -19,7 +19,7 @@ class BaseTest(TestCase):
         """
         verify the default hsl generated
         """
-        self.assertDictEqual(self.base.to_hsl(),{
+        self.assertDictEqual(self.base.to_hsl(), {
             'text': 'title',
             'type': 'type',
             'voice_text': ''
@@ -30,11 +30,12 @@ class BaseTest(TestCase):
         verify that voice text is updated in the hsl
         """
         self.base.voice_text = "voice"
-        self.assertDictEqual(self.base.to_hsl(),{
+        self.assertDictEqual(self.base.to_hsl(), {
             'text': 'title',
             'type': 'type',
             'voice_text': 'voice'
         })
+
 
 if __name__ == '__main__':
     main()

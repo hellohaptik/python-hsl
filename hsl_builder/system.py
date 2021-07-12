@@ -1,10 +1,12 @@
 from .base import BaseElement
-from enum import unique,Enum
+from enum import unique, Enum
+
 
 @unique
 class SystemEvents(Enum):
     PINNED = 'chat_pinned'
     COMPLETE = 'chat_complete'
+
 
 class System(BaseElement):
     """
@@ -18,8 +20,8 @@ class System(BaseElement):
     payload : dict
         additonal data sent as payload
     """
-    def __init__(self,text :str,event_name: SystemEvents):
-        super().__init__(text,'SYSTEM')
+    def __init__(self, text: str, event_name: SystemEvents):
+        super().__init__(text, 'SYSTEM')
         self.event = event_name
         self.payload = {}
 

@@ -19,7 +19,7 @@ class Form(object):
         list of formfields that will be added to the form
 
     """
-    def __init__(self,text: str, subtitle: str):
+    def __init__(self, text: str, subtitle: str):
         self.title: str = text
         self.type: str = 'FORM'
         self.subtitle: str = subtitle

@@ -1,9 +1,10 @@
-from unittest import TestCase,main
+from unittest import TestCase, main
 import mock
 
 from hsl_builder import Button
 from hsl_builder.elements import Actionable
 from .mocks import MockActionable
+
 
 class ButtonTest(TestCase):
 
@@ -30,10 +31,10 @@ class ButtonTest(TestCase):
         """
         verify the default hsl generated
         """
-        self.assertDictEqual(self.button.to_hsl(),self.expected_hsl)
+        self.assertDictEqual(self.button.to_hsl(), self.expected_hsl)
 
-    @mock.patch.object(Actionable,'to_hsl')
-    def test_hsl_actionable(self,mock_hsl):
+    @mock.patch.object(Actionable, 'to_hsl')
+    def test_hsl_actionable(self, mock_hsl):
         """
         verify that button generates correct hsl for added actionables
         """
@@ -49,6 +50,7 @@ class ButtonTest(TestCase):
         ]
         self.assertDictEqual(self.button.to_hsl(), self.expected_hsl)
         mock_hsl.assert_called_once()
+
 
 if __name__ == '__main__':
     main()

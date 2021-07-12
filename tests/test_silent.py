@@ -1,4 +1,4 @@
-from unittest import TestCase,main
+from unittest import TestCase, main
 import mock
 
 from hsl_builder import Silent
@@ -23,7 +23,7 @@ class SilentTest(TestCase):
         """
         verify the default hsl generated
         """
-        self.assertDictEqual(self.silent.to_hsl(),{
+        self.assertDictEqual(self.silent.to_hsl(), {
             'text': 'title',
             'type': 'SILENT',
             'voice_text': '',
@@ -32,7 +32,7 @@ class SilentTest(TestCase):
             }
         })
 
-    @mock.patch.object(SilentAction,'to_hsl')
+    @mock.patch.object(SilentAction, 'to_hsl')
     def test_hsl_with_silent_action(self, mock_hsl):
         """
         verify that silent actions are added in the hsl
@@ -41,19 +41,20 @@ class SilentTest(TestCase):
             'key': 'value'
         }
         self.silent.actions.append(MockSilentAction())
-        self.assertDictEqual(self.silent.to_hsl(),{
+        self.assertDictEqual(self.silent.to_hsl(), {
             'text': 'title',
             'type': 'SILENT',
             'voice_text': '',
             'data': {
                 'silent_actions': [
                     {
-                        'key':'value'
+                        'key': 'value'
                     }
                 ]
             }
         })
         mock_hsl.assert_called_once()
+
 
 if __name__ == '__main__':
     main()

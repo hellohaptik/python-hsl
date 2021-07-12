@@ -1,5 +1,6 @@
-from enum import Enum,unique
+from enum import Enum, unique
 from typing import List
+
 
 @unique
 class FormFieldType(Enum):
@@ -16,6 +17,7 @@ class FormFieldType(Enum):
     DOB = 'dob'
     MULTI_DAY_PICKER = 'multidaypicker'
     MULTI_SELECT_PICKER = 'multiselectpicker'
+
 
 @unique
 class FormKeyboardType(Enum):
@@ -43,7 +45,7 @@ class FormField(object):
     order : int
         The order of the form
 
-    icon : str 
+    icon : str
         Icon name for the field.
 
     hint : str
@@ -59,7 +61,7 @@ class FormField(object):
     search_placeholder : str
         placeholder when no text is entered for search type fields
 
-    autofill : str 
+    autofill : str
         Auto fill field based on user profile or default value.
 
     auto_fill_source : str
@@ -94,5 +96,5 @@ class FormField(object):
             'search_placeholder': self.search_placeholder,
             'autofill': self.autofill,
             'autofill_source': self.autofill_source,
-            #TODO: add regex fields
+            # TODO: add regex fields
         }

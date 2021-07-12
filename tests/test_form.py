@@ -1,9 +1,10 @@
-from unittest import TestCase,main
+from unittest import TestCase, main
 import mock
 
 from hsl_builder import Form
 from hsl_builder.elements import FormField
 from .mocks import MockFormField
+
 
 class FormTest(TestCase):
 
@@ -29,7 +30,7 @@ class FormTest(TestCase):
             "text": "mock text"
         }
         self.form.fields.append(mockfield)
-        self.assertDictEqual(self.form.to_hsl(),{
+        self.assertDictEqual(self.form.to_hsl(), {
             'title': 'title',
             'type': 'FORM',
             'subtitle': 'subtitle',
@@ -55,7 +56,7 @@ class FormTest(TestCase):
         }
         self.form.fields.append(mockfield1)
         self.form.fields.append(mockfield2)
-        self.assertDictEqual(self.form.to_hsl(),{
+        self.assertDictEqual(self.form.to_hsl(), {
             'title': 'title',
             'type': 'FORM',
             'subtitle': 'subtitle',
@@ -70,7 +71,8 @@ class FormTest(TestCase):
                 ]
             }
         })
-        self.assertEqual(mock_hsl.call_count,2)
+        self.assertEqual(mock_hsl.call_count, 2)
+
 
 if __name__ == '__main__':
     main()

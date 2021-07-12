@@ -1,6 +1,7 @@
 from .actionable import Actionable
 from typing import List
 
+
 class CarouselItem(object):
     """
     Create Carousel Items for Carousel
@@ -9,10 +10,10 @@ class CarouselItem(object):
     ----------
     title : str
         Title of specific carousel item.
-        
+
     subtitle : str
         Subtitle of specific carousel item.
-        
+
     description : str
         More verbose description of item that is shown below the subtitle
 
@@ -23,8 +24,7 @@ class CarouselItem(object):
         meta value for the corresponding carousal item
     """
 
-
-    def __init__(self,title: str, subtitle: str):
+    def __init__(self, title: str, subtitle: str):
         self.title: str = title
         self.subtitle: str = subtitle
         self.description: str = ''

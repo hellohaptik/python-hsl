@@ -2,6 +2,7 @@ from typing import List
 from .base import BaseElement
 from .elements.actionable import Actionable
 
+
 class Button(BaseElement):
     """
     Create Button HSL Elements
@@ -12,8 +13,8 @@ class Button(BaseElement):
         list of actionables that will be added to the button
 
     """
-    def __init__(self,text):
-        super().__init__(text,'BUTTON')
+    def __init__(self, text):
+        super().__init__(text, 'BUTTON')
         self.actionables: List[Actionable] = []
 
     def to_hsl(self):

@@ -1,8 +1,9 @@
-from enum import Enum,unique
+from enum import Enum, unique
 from typing import List
 
 from .base import BaseElement
 from .elements.carousel_item import CarouselItem
+
 
 @unique
 class CarouselWidth(Enum):
@@ -27,8 +28,8 @@ class Carousel(BaseElement):
     items : List[CarouselItem]
         list of carousel items for the carousel
     """
-    def __init__(self,text):
-        super().__init__(text,'CAROUSEL')
+    def __init__(self, text):
+        super().__init__(text, 'CAROUSEL')
         self.aspect_ratio: float = 1.0
         self.width: CarouselWidth = CarouselWidth.THIN
         self.items: List[CarouselItem] = []

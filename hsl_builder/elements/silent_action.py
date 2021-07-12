@@ -6,14 +6,14 @@ class SilentAction(object):
     ----------
     type : str
         Type of silent action.
-        
+
     via_name : str
         via_name of the corresponding business.
-        
-        
+
+
     action_id : str
         id of the silent action.
-        
+
     data : dict
         options that will be sent as payload
     """

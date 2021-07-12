@@ -1,8 +1,9 @@
-from unittest import TestCase,main
+from unittest import TestCase, main
 import mock
 
-from hsl_builder import Carousel,CarouselWidth
+from hsl_builder import Carousel, CarouselWidth
 from hsl_builder.elements import CarouselItem
+
 
 class CarouselTest(TestCase):
 
@@ -23,7 +24,7 @@ class CarouselTest(TestCase):
         """
         verify the default hsl generated
         """
-        self.assertDictEqual(self.carousel.to_hsl(),{
+        self.assertDictEqual(self.carousel.to_hsl(), {
             'text': 'title',
             'type': 'CAROUSEL',
             'voice_text': '',
@@ -34,8 +35,8 @@ class CarouselTest(TestCase):
             }
         })
 
-    @mock.patch.object(CarouselItem,'to_hsl')
-    def test_hsl_carousel_item(self,mock_hsl):
+    @mock.patch.object(CarouselItem, 'to_hsl')
+    def test_hsl_carousel_item(self, mock_hsl):
         """
         verify that hsl for carouselItem is added in the Carousel
         """
@@ -44,7 +45,7 @@ class CarouselTest(TestCase):
         }
         mock_carousel_item = CarouselItem("title", "subtitle")
         self.carousel.items.append(mock_carousel_item)
-        self.assertDictEqual(self.carousel.to_hsl(),{
+        self.assertDictEqual(self.carousel.to_hsl(), {
             'text': 'title',
             'type': 'CAROUSEL',
             'voice_text': '',
@@ -65,7 +66,7 @@ class CarouselTest(TestCase):
         verify that aspect ratio is updated in the generated hsl
         """
         self.carousel.aspect_ratio = 23
-        self.assertDictEqual(self.carousel.to_hsl(),{
+        self.assertDictEqual(self.carousel.to_hsl(), {
             'text': 'title',
             'type': 'CAROUSEL',
             'voice_text': '',
@@ -81,7 +82,7 @@ class CarouselTest(TestCase):
         verify that FAT width is updated in the generated hsl
         """
         self.carousel.width = CarouselWidth.FAT
-        self.assertDictEqual(self.carousel.to_hsl(),{
+        self.assertDictEqual(self.carousel.to_hsl(), {
             'text': 'title',
             'type': 'CAROUSEL',
             'voice_text': '',
@@ -97,7 +98,7 @@ class CarouselTest(TestCase):
         verify that BIG width  is updated in the generated hsl
         """
         self.carousel.width = CarouselWidth.BIG
-        self.assertDictEqual(self.carousel.to_hsl(),{
+        self.assertDictEqual(self.carousel.to_hsl(), {
             'text': 'title',
             'type': 'CAROUSEL',
             'voice_text': '',
@@ -113,7 +114,7 @@ class CarouselTest(TestCase):
         verify that MEDIUM width  is updated in the generated hsl
         """
         self.carousel.width = CarouselWidth.MEDIUM
-        self.assertDictEqual(self.carousel.to_hsl(),{
+        self.assertDictEqual(self.carousel.to_hsl(), {
             'text': 'title',
             'type': 'CAROUSEL',
             'voice_text': '',
@@ -123,6 +124,7 @@ class CarouselTest(TestCase):
                 'items': []
             }
         })
+
 
 if __name__ == '__main__':
     main()

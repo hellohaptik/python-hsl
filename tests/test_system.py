@@ -1,7 +1,7 @@
-from unittest import TestCase,main
-import mock
+from unittest import TestCase, main
 
-from hsl_builder import System,SystemEvents
+from hsl_builder import System, SystemEvents
+
 
 class SystemCompleteTest(TestCase):
 
@@ -20,7 +20,7 @@ class SystemCompleteTest(TestCase):
         """
         verify the default hsl generated
         """
-        self.assertDictEqual(self.system.to_hsl(),{
+        self.assertDictEqual(self.system.to_hsl(), {
             'text': 'complete',
             'type': 'SYSTEM',
             'voice_text': '',
@@ -36,9 +36,9 @@ class SystemCompleteTest(TestCase):
         """
         self.system.payload = {
             "key": "value",
-            "agent":"agent_name"
+            "agent": "agent_name"
         }
-        self.assertDictEqual(self.system.to_hsl(),{
+        self.assertDictEqual(self.system.to_hsl(), {
             'text': 'complete',
             'type': 'SYSTEM',
             'voice_text': '',
@@ -46,10 +46,11 @@ class SystemCompleteTest(TestCase):
                 'event_name': 'chat_complete',
                 'payload': {
                     "key": "value",
-                    "agent":"agent_name"
+                    "agent": "agent_name"
                 }
             }
         })
+
 
 class SystemWaitingTest(TestCase):
 
@@ -68,7 +69,7 @@ class SystemWaitingTest(TestCase):
         """
         verify the default hsl generated
         """
-        self.assertDictEqual(self.system.to_hsl(),{
+        self.assertDictEqual(self.system.to_hsl(), {
             'text': 'waiting',
             'type': 'SYSTEM',
             'voice_text': '',
@@ -84,9 +85,9 @@ class SystemWaitingTest(TestCase):
         """
         self.system.payload = {
             "key": "value",
-            "agent":"agent_name"
+            "agent": "agent_name"
         }
-        self.assertDictEqual(self.system.to_hsl(),{
+        self.assertDictEqual(self.system.to_hsl(), {
             'text': 'waiting',
             'type': 'SYSTEM',
             'voice_text': '',
@@ -94,10 +95,11 @@ class SystemWaitingTest(TestCase):
                 'event_name': 'chat_pinned',
                 'payload': {
                     "key": "value",
-                    "agent":"agent_name"
+                    "agent": "agent_name"
                 }
             }
         })
+
 
 if __name__ == '__main__':
     main()

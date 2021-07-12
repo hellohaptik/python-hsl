@@ -9,10 +9,11 @@ class NativeAction(BaseElement):
     Attributes
     ----------
     method : str
-        the method name for the native action 
+        the method name for the native action
     """
-    def __init__(self,text: str, method: str):
-        super().__init__(text,'NATIVE_ACTION')
+
+    def __init__(self, text: str, method: str):
+        super().__init__(text, 'NATIVE_ACTION')
         self.method = method
 
     def to_hsl(self):

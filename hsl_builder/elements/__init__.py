@@ -3,7 +3,7 @@ from .actionable import Actionable, ActionableType, URI
 from .carousel_item import CarouselItem
 from .silent_action import SilentAction
 
-__all__=[
+__all__ = [
     'FormField',
     'Actionable',
     'SilentAction',
