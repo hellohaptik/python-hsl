@@ -59,7 +59,7 @@ publish to test.pypi.org to make sure that whl is built correctly and can be ins
 python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 ```
 
-publish to pypi 
+publish to pypi
 ```sh
 python -m twine upload dist/*
 ```

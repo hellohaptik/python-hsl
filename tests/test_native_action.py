@@ -1,7 +1,7 @@
-from unittest import TestCase,main
-import mock
+from unittest import TestCase, main
 
 from hsl_builder import NativeAction
+
 
 class NativeActionTest(TestCase):
 
@@ -20,7 +20,7 @@ class NativeActionTest(TestCase):
         """
         verify the default hsl generated
         """
-        self.assertDictEqual(self.native.to_hsl(),{
+        self.assertDictEqual(self.native.to_hsl(), {
             'text': 'title',
             'type': 'NATIVE_ACTION',
             'voice_text': '',
@@ -28,6 +28,7 @@ class NativeActionTest(TestCase):
                 'method': 'METHOD'
             }
         })
+
 
 if __name__ == '__main__':
     main()

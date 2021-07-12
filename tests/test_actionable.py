@@ -1,6 +1,6 @@
-import mock
 from unittest import TestCase, main
 from hsl_builder.elements import Actionable, URI, ActionableType
+
 
 class ActionableTest(TestCase):
 
@@ -21,7 +21,7 @@ class ActionableTest(TestCase):
         """
         verify the default hsl generated
         """
-        self.assertDictEqual(self.actionable.to_hsl(),self.expected_hsl)
+        self.assertDictEqual(self.actionable.to_hsl(), self.expected_hsl)
 
     def test_actionable_type_APP_ACTION(self):
         """

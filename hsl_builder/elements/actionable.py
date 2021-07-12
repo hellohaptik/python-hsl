@@ -1,4 +1,5 @@
-from enum import unique,Enum
+from enum import unique, Enum
+
 
 @unique
 class URI(Enum):
@@ -19,7 +20,7 @@ class URI(Enum):
 @unique
 class ActionableType(Enum):
     """
-    Actionable Types for specifying what action should be taken 
+    Actionable Types for specifying what action should be taken
     """
     APP_ACTION = 'APP_ACTION'
     MESSAGE_BAR = 'MESSAGE_BAR'
@@ -28,7 +29,8 @@ class ActionableType(Enum):
     SHARE_RECEIPT = 'SHARE_RECEIPT'
     APP_FEEDBACK = 'APP_FEEDBACK'
     SHARE = 'SHARE'
- 
+
+
 class Actionable(object):
     """
     Create Actionables to be used in Buttons or Text messages
@@ -36,21 +38,21 @@ class Actionable(object):
     Attributes
     ----------
     text : str
-        Text for the Actionable that will be displayed on the CTA (button, quick reply,etc).
-        
+        Text for the Actionable that will be displayed on the CTA (button, quick reply, etc).
+
     type : ActionableType
         The type of `ActionableType`.
-        
+
     type : URI
         The type of `URI`.
-        
+
     location_required : bool
         True if location is required for using the Actionable.
 
     is_default : bool
         if True, on click of the element, this actionable will get triggered.
 
-    payload : dict 
+    payload : dict
         optional payload containing metadata that might be needed by the Actionable
     """
 

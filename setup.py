@@ -1,4 +1,4 @@
-from setuptools import setup,find_packages
+from setuptools import setup, find_packages
 
 
 with open("README.md", "r") as fh:
@@ -11,6 +11,6 @@ setup(
     license='MIT',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    packages=find_packages(exclude=('tests',)),
+    packages=find_packages(exclude=('tests', )),
     zip_safe=False,
     url="https://github.com/hellohaptik/python-hsl")

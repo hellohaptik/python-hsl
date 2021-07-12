@@ -2,13 +2,16 @@ from typing import List
 from .base import BaseElement
 from .elements.actionable import Actionable
 
+
 class Text(BaseElement):
     """
     Create simple text message HSL
     """
-    def __init__(self,text):
-        super().__init__(text,'TEXT')
+
+    def __init__(self, text):
+        super().__init__(text, 'TEXT')
         self.quick_replies: List[Actionable] = []
+
     def to_hsl(self):
         """
         Generate HSL message

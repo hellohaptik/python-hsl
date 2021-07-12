@@ -3,6 +3,7 @@ from typing import List
 
 from .elements import SilentAction
 
+
 class Silent(BaseElement):
     """
     Create Silent Message HSL
@@ -12,8 +13,8 @@ class Silent(BaseElement):
     actions : List[SilentAction]
         list of silent acitons to be taken
     """
-    def __init__(self,text: str):
-        super().__init__(text,'SILENT')
+    def __init__(self, text: str):
+        super().__init__(text, 'SILENT')
         self.actions: List[SilentAction] = []
 
     def to_hsl(self):
